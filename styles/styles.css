@@ -69,7 +69,10 @@ i {
     align-items: center;
     flex-wrap: wrap;
     }
-    .flex--start {
+    .flex--top {
+        align-items: flex-start;
+    }
+    .flex--left {
         justify-content: flex-start;
     }
 
@@ -91,6 +94,16 @@ i {
 
 /* ----- UI COMPONENTS ----- */
 
+.field {
+    padding-left: 1rem;
+    border: none;
+    font-family:inherit;
+    font-size: inherit;  
+    }
+    .field--border {
+        border: 1px solid var(--third-color);
+    }
+
 .button {
     padding: .5rem 2rem;
     border: none;
@@ -98,12 +111,12 @@ i {
     text-transform: uppercase;
     color: white;
     }
-    button:hover {
+    .button:hover {
         background-color: var(--comp-gray);
         color: var(--text-color);
         transition: 100ms;
     }
-    .button--header {
+    .button--search {
         padding: .2rem 1rem;
     }
     .button--alt {
@@ -152,7 +165,7 @@ i {
         height: 100%;
     }
     .topbar__contact {
-        width: 30%;
+        width: 80%;
         height: 100%;
         }
         .topbar__contact i,
@@ -166,7 +179,7 @@ i {
             color: white;
         }
     .topbar__socials {
-        width: 15%;
+        width: 20%;
     }
     .topbar__icon {
         margin-right: 1rem;
@@ -177,6 +190,11 @@ i {
         .topbar__icon i:hover {
             color: var(--comp-gray);
         }
+    @media screen and (max-width: 920px) {
+        .topbar {
+            display: none;
+        }
+    }
 
 #header {
     position: -webkit-sticky;
@@ -220,16 +238,66 @@ i {
         width: 24%;
         }
         .header__search fieldset {
-            /* justify-content: center; */
             padding: 0;
             border: none;
         }
     .header__field {
         width: 80%;
         height: 2rem;
-        padding-left: 1rem;
-        font-family: inherit;
-        font-size: inherit;
+    }
+    @media screen and (max-width: 600px) {
+        .header__logo {
+            width: 40%;
+            max-width: 200px;
+        }
+        .header__menu {
+            display: none;
+        }
+        .header__search {
+            width: 50%;
+        }
+        .header__field {
+            width: 60%;
+        }
+    }
+    @media screen and (min-width: 601px) and (max-width: 1110px) {
+        .header__logo {
+            width: 25%;
+            max-width: 200px;
+        }
+        .header__menu {
+            width: 70%;
+        }
+        .header__link {
+            margin-right: 1.8rem;
+        }
+        .header__search {
+            display: none;
+        }
+    }
+    @media screen and (min-width: 1111px) and (max-width: 1280px) {
+        .header__logo {
+            width: 16%;
+            max-width: 200px;
+        }
+        .header__menu {
+            width: 50%;
+        }
+        .header__search {
+            width: 28%;
+        }
+    }
+    @media screen and (min-width: 1281px) and (max-width: 1294px) {
+        .header__logo {
+            width: 20%;
+            max-width: 200px;
+        }
+        .header__menu {
+            width: 55%;
+        }
+        .header__search {
+            width: 25%;
+        }
     }
 
 .hero {
@@ -240,8 +308,8 @@ i {
     }
     .hero__cta {
         position: absolute;
-        left: 128px;
-        bottom: 120px;
+        left: 10%;
+        bottom: 20%;
         width: 36%;
         color: white;
         z-index: 100;
@@ -251,6 +319,26 @@ i {
             margin-bottom: 1.5rem;
             text-align: left;
         }
+    @media screen and (max-width: 1110px) {
+        .hero {
+            height: 510px;
+        }
+        .hero__cta {
+            left: 50%;
+            width: 70%;
+            transform: translate(-50%);
+
+        }
+        .hero__cta h1,
+        .hero__cta p {
+            text-align: center;
+        }
+        .hero__cta .button {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
 
 .text-section {
     margin: 6rem auto;
@@ -301,14 +389,36 @@ i {
     }
     .team__card {
         width: 23%;
-        height: 470px;
+        padding-bottom: 1rem;
         background: white;
         box-shadow: 0 8px 12px rgba(77, 77, 77, .3);
         }
         .team__caption {
             width: 90%;
-            margin: .8rem auto 0;
+            margin: 1.1rem auto 0;
             }
+    @media screen and (max-width: 600px) {
+        .team__card {
+            width: 80%;
+            margin: 0 auto 3rem;
+        }
+    }
+    @media screen and (min-width: 601px) and (max-width: 920px) {
+        .team__card {
+            width: 40%;
+            margin: 0 auto 3rem;
+        }
+    }
+    @media screen and (max-width: 920px) {
+        .team {
+            padding-bottom: 58px;
+        }
+    }
+    @media screen and (min-width: 921px) and (max-width: 1024px) {
+        .team__card {
+            height: 440px;
+        }
+    }
 
 .services {
     margin-top: 80px;
@@ -323,9 +433,8 @@ i {
     }
     .services__card {
         width: 23%;
-        height: 260px;
         border: solid 1px var(--comp-gray);
-        padding: 1.5rem .8rem 0;
+        padding: 1.8rem 1rem;
         }
         .services__card i {
             color: var(--text-color);
@@ -334,6 +443,23 @@ i {
         .services__card h3 {
             margin: 1rem auto;
         }
+    @media screen and (max-width: 600px) {
+        .services__card {
+            width: 80%;
+            margin: 0 auto 3rem;
+        }
+    }
+    @media screen and (min-width: 601px) and (max-width: 920px) {
+        .services__card {
+            width: 40%;
+            margin: 0 auto 3rem;
+            }
+    }
+    @media screen and (max-width: 920px) {
+        .services {
+            margin-bottom: 52px;
+        }
+    }
 
 .testimonial {
     position: relative;
@@ -344,9 +470,9 @@ i {
     }
     .testimonial_content {
         position: absolute;
-        top: 5.5rem;
-        right: 20px;
-        left: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         z-index: 200;
     }
     .testimonial h2, p {
@@ -362,13 +488,21 @@ i {
         margin: 2.5rem auto 0;
         background-color: var(--comp-gray);
     }
+    @media screen and (max-width: 600px) {
+        .testimonial {
+            height: 700px;
+        }
+    }
+    @media screen and (min-width: 600px) and (max-width: 811px) {
+        .testimonial {
+            height: 600px;
+        }
+    }
 
 #contact {
     background-color: var(--main-color);
     }
     .contact {
-        display: flex;
-        justify-content: space-between;
         padding: 6rem 0;
         }
         .contact__cta {
@@ -389,21 +523,31 @@ i {
             padding: 0;
             border: none;
         }
-        .contact__field {
+        .contact__input {
             width: 48.5%;
             height: 2rem;
-            padding-left: 1rem;
-            margin-bottom: 1.4rem;
-            border: none;
-            font-family:inherit;
-            font-size: inherit;            
+            margin-bottom: 1.4rem;         
         }
-        .contact__field--msg {
+        .contact__input--big {
             width: 100%;
             height: 4rem;
             padding-top: .6rem;
             margin-bottom: 2.1rem;
         }
+    @media screen and (max-width: 600px) {
+        .contact__input {
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        .contact__cta {
+            width: 100%;
+            margin-bottom: 3rem;
+        }
+        .contact__form {
+            width: 100%;
+        }
+    }
 
 #footer {
     background: var(--third-color);
@@ -477,3 +621,50 @@ i {
         .footer__licence a {
             color: var(--accent-color);
         }
+    @media screen and (max-width: 600px) {
+        .footer__sections {
+            margin-bottom: 3rem;
+        }
+        .footer__col:not(:last-child) {
+            padding-right: 0;
+            padding-bottom: 2rem;
+            border-right: none;
+            border-bottom: 1px solid var(--text-color);
+            margin-right: 0;
+            margin-bottom: 3rem;
+            }
+            .footer__col h3,
+            .footer__col p,
+            .footer__col a {
+                text-align: center;
+            }
+        .footer__about,
+        .footer__newsletter {
+            width: 100%;
+        }
+        .footer__about {
+            margin-bottom: 3rem;
+        }
+        .footer__input{
+            width: 68%;
+        }
+        .footer__socials {
+            text-align: center;
+        }
+        .footer__licence {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    @media screen and (max-width: 920px) {
+        .footer__menu {
+            display: none;
+        }
+    }
+    @media screen and (min-width: 601px) and (max-width: 920px) {
+        .footer__about,
+        .footer__newsletter {
+            width: 45%;
+        }
+    }

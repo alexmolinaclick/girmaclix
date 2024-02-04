@@ -17,7 +17,7 @@
 <body>
     <div class="topbar">
         <div class="topbar__content container flex">
-            <div class="topbar__contact flex">
+            <div class="topbar__contact flex flex--left">
                 <i class="bi bi-telephone-fill"></i>
                 <p>455 6108640</p>
                 <i class="bi bi-envelope-fill"></i>
@@ -45,9 +45,9 @@
                 </ul>
             </nav>
             <form class="header__search">
-                <fieldset class="flex flex--start">
-                    <input type="text" placeholder="Search" class="header__field">
-                    <button type="submit" value="Submit" class="button button--header"><i class="bi bi-search"></i></button>
+                <fieldset class="flex flex--left">
+                    <input type="text" placeholder="Search" class="header__field field field--border">
+                    <button type="button" value="Submit" class="button button--search"><i class="bi bi-search"></i></button>
                 </fieldset>
             </form>
         </div>
@@ -144,7 +144,7 @@
                 <div class="services__card">
                     <i class="bi bi-rocket-takeoff card-icon"></i>
                     <h3>On-Page Optimization</h3>
-                    <p>Fine-tuning website elements such as meta tags, content structure, and internal links to improve user experience and rank your site.</p>
+                    <p>Tuning website elements such as meta tags, content structure, and internal links to improve user experience and rank your site.</p>
                 </div>
                 <div class="services__card">
                     <i class="bi bi-folder-symlink card-icon"></i>
@@ -182,7 +182,7 @@
         </div>
 
         <section id="contact">
-            <div class="contact container">
+            <div class="contact flex container">
                 <div class="contact__cta">
                     <h3>Request for call back</h3>
                     <p>Join us on this journey towards SEO excellence. Let's work together to unlock the full potential of your business.</p>
@@ -190,11 +190,11 @@
                 <div class="contact__form">
                     <form action="">
                         <fieldset class="contact__fields">
-                            <input name="name" type="text" placeholder="First Name" required class="contact__field">
-                            <input name="last-name" type="text" placeholder="Last Name" required class="contact__field">
-                            <input name="company" type="text" placeholder="Company" required class="contact__field">
-                            <input name="email" type="email" placeholder="Your Email" required class="contact__field">
-                            <textarea name="message" placeholder="Message" required class="contact__field contact__field--msg"></textarea>
+                            <input name="name" type="text" placeholder="First Name" required class="contact__input field">
+                            <input name="last-name" type="text" placeholder="Last Name" required class="contact__input field">
+                            <input name="company" type="text" placeholder="Company" required class="contact__input field">
+                            <input name="email" type="email" placeholder="Your Email" required class="contact__input field">
+                            <textarea name="message" placeholder="Message" required class="contact__input contact__input--big field"></textarea>
                             <input name="send" type="submit" value="SEND" class="button button--alt">
                         </fieldset>
                     </form>
@@ -204,7 +204,7 @@
     </main>
 
     <footer id="footer">
-        <div class="footer__sections flex container">
+        <div class="footer__sections flex flex--top container">
             <div class="footer__col footer__about">
                 <h3>About Us</h3>
                 <p>Boosting brands, elevating visibility: the company where SEO and marketing collide for your success!</p>
@@ -212,7 +212,7 @@
             </div>
 
             <div class="footer__col footer__menu">
-                <h3>Contact</h3>
+                <h3>Navigation</h3>
                 <a href="#">Company</a>
                 <a href="#about">About</a>
                 <a href="#services">Services</a>
@@ -223,9 +223,9 @@
                 <h3>Newsletter</h3>
                 <p>Stay ahead of the curve! Subscribe to our newsletter for exclusive SEO tips.</p>
                 <form action="" class="footer__form">
-                    <fieldset class="footer__fields flex flex--start">
-                        <input name="email" type="email" placeholder="Your Email" required class="footer__input">
-                        <input name="login" type="submit" value="SEND" class="button">
+                    <fieldset class="footer__fields flex flex--left">
+                        <input name="email" type="email" placeholder="Your Email" required class="footer__input field">
+                        <input name="login" type="button" value="SEND" class="button">
                     </fieldset>
                 </form>
                 <div class="footer__socials">
@@ -237,7 +237,5 @@
         </div>
         <p class="footer__licence">Copyright &copy; Girmaclix Solutions 2023 | Developed by <a href="https://github.com/alexmolinaclick">Alex Molina</a>.</p>
     </footer>
-
-    <script></script>
 </body>
 </html>
