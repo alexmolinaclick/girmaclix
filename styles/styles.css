@@ -303,7 +303,7 @@ i {
 .hero {
     position: relative;
     height: 600px;
-    background-image: url(/assets/hero-bg.webp);
+    background-image: url(https://raw.githubusercontent.com/alexmolinaclick/girmaclix/main/assets/hero-bg.webp);
     background-size: cover;
     }
     .hero__cta {
@@ -354,7 +354,7 @@ i {
 .cta {
     height: 420px;
     padding-top: 7.5rem;
-    background-image: url(/assets/cta-pic.webp);
+    background-image: url(https://raw.githubusercontent.com/alexmolinaclick/girmaclix/main/assets/cta-pic.webp);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -464,7 +464,7 @@ i {
 .testimonial {
     position: relative;
     height: 500px;
-    background-image: url(/assets/test-bg.webp);
+    background-image: url(https://raw.githubusercontent.com/alexmolinaclick/girmaclix/main/assets/test-bg.webp);
     background-size: cover;
     background-repeat: no-repeat;
     }
